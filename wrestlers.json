@@ -33,7 +33,7 @@
     "company": "WWE",
     "style": "POWERHOUSE",
     "hometown": "New York"
-  },
+  }
   {
     "name": "Frank Smith",
     "status": "Legend",
@@ -46,3 +46,4 @@
     "style": "TECHNICIAN",
     "hometown": "Los Angeles"
 ]
+
