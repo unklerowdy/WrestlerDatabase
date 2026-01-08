@@ -23,5 +23,26 @@
     "style": "TECHNICIAN",
     "hometown": "Los Angeles"
   }
+      "name": "Undertaker",
+    "status": "Legender",
+    "gender": "Male",
+    "class": "Super Heavyweight",
+    "type": "Face",
+    "height": "6'10",
+    "weight": "300 lbs",
+    "company": "WWE",
+    "style": "POWERHOUSE",
+    "hometown": "New York"
+  },
+  {
+    "name": "Frank Smith",
+    "status": "Legend",
+    "gender": "Male",
+    "class": "Cruiserweight",
+    "type": "Heel",
+    "height": "6'0",
+    "weight": "135 lbs",
+    "company": "AEW",
+    "style": "TECHNICIAN",
+    "hometown": "Los Angeles"
 ]
-
