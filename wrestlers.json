@@ -22,8 +22,8 @@
     "company": "AEW",
     "style": "TECHNICIAN",
     "hometown": "Los Angeles"
-  }
-      "name": "Undertaker",
+  },
+    "name": "Undertaker",
     "status": "Legender",
     "gender": "Male",
     "class": "Super Heavyweight",
@@ -33,7 +33,7 @@
     "company": "WWE",
     "style": "POWERHOUSE",
     "hometown": "New York"
-  }
+  },
   {
     "name": "Frank Smith",
     "status": "Legend",
@@ -45,5 +45,7 @@
     "company": "AEW",
     "style": "TECHNICIAN",
     "hometown": "Los Angeles"
+  }
 ]
+
 
