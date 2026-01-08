@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wrestler Database</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .container { width: 80%; margin: 0 auto; }
+    input, select { margin: 5px 0; padding: 10px; width: 100%; max-width: 300px; }
+    .table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .table th, .table td { border: 1px solid #ddd; padding: 8px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Wrestler Database</h1>
+    <label for="wrestler-search">Enter Wrestler Name:</label>
+    <input type="text" id="wrestler-search" placeholder="Search by Name">
+
+    <h2>Wrestler Information</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Gender</th>
+          <th>Class</th>
+          <th>Type</th>
+          <th>Height</th>
+          <th>Weight</th>
+          <th>Wrestling Company</th>
+          <th>Style</th>
+          <th>Hometown</th>
+        </tr>
+      </thead>
+      <tbody id="wrestler-table-body">
+        <!-- Data will be inserted here dynamically -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    // Sample data (could be replaced with a database in the future)
+    const wrestlers = [
+      {
+        name: "John Doe",
+        status: "Active",
+        gender: "Male",
+        class: "Heavyweight",
+        type: "Face",
+        height: "6'2",
+        weight: "225 lbs",
+        company: "WWE",
+        style: "STRIKER",
+        hometown: "NYC"
+      },
+      {
+        name: "Jane Smith",
+        status: "Legend",
+        gender: "Female",
+        class: "Cruiserweight",
+        type: "Heel",
+        height: "5'7",
+        weight: "135 lbs",
+        company: "AEW",
+        style: "TECHNICIAN",
+        hometown: "LA"
+      }
+    ];
+
+    // Search function
+    document.getElementById('wrestler-search').addEventListener('input', function(event) {
+      const searchTerm = event.target.value.toLowerCase();
+      const filteredWrestlers = wrestlers.filter(wrestler => wrestler.name.toLowerCase().includes(searchTerm));
+      displayWrestlers(filteredWrestlers);
+    });
+
+    // Display wrestlers in the table
+    function displayWrestlers(wrestlers) {
+      const tableBody = document.getElementById('wrestler-table-body');
+      tableBody.innerHTML = '';  // Clear previous data
+
+      wrestlers.forEach(wrestler => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${wrestler.name}</td>
+          <td>${wrestler.status}</td>
+          <td>${wrestler.gender}</td>
+          <td>${wrestler.class}</td>
+          <td>${wrestler.type}</td>
+          <td>${wrestler.height}</td>
+          <td>${wrestler.weight}</td>
+          <td>${wrestler.company}</td>
+          <td>${wrestler.style}</td>
+          <td>${wrestler.hometown}</td>
+        `;
+        tableBody.appendChild(row);
+      });
+    }
+
+    // Initially display all wrestlers
+    displayWrestlers(wrestlers);
+  </script>
+</body>
+</html>
